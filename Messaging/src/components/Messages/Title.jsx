@@ -30,7 +30,7 @@ export default function Title({
 							? selectedUser.email
 							: selectedChannel
 							? selectedChannel.name
-							: 'Create or Select a Channel or Direct Message'}
+							: 'Never hesitate to start a good conversation.'}
 					</h2>
 					{selectedChannel && <GoKebabHorizontal onClick={handleChannelInfo} />}
 				</TitleContainer>

@@ -37,7 +37,7 @@ export const ModalStyles = styled.div`
 // TOPBAR
 export const TopBarLayout = styled.div`
 	height: 7vh;
-	background-color: #19171d;
+	background-color: #00008b;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
@@ -57,7 +57,7 @@ export const Avatar = styled.div`
 
 // SIDEBAR
 export const SidebarStyles = styled.div`
-	background-color: #19171d;
+	background-color: #00008b;
 	height: 93vh;
 	flex: 1;
 	h2 {

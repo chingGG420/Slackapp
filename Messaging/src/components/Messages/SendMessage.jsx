@@ -68,7 +68,7 @@ export default function SentMessages({ selectedUser, selectedChannel }) {
 	return (
 		<MessagesStyles>
 			<MessageLayout>
-				<h3>This is the start of your messages</h3>
+				<h3>Say Hi!</h3>
 			</MessageLayout>
 			{newMessages?.length > 0 &&
 				newMessages.map(message => <Message key={message.date} message={message} />)}

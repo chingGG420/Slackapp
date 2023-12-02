@@ -46,7 +46,7 @@ export default function Login() {
 	return (
 		<FormLayout>
 			<FormContainer>
-				<h1>Welcome To Hell</h1>
+				<h1>Sign in</h1>
 				<p>
 					Enter your <span>email</span> and <span>password</span>
 				</p>

@@ -13,7 +13,7 @@ export default function Sidebar({ setIsNewMessage, setIsModalShow }) {
 	return (
 		<SidebarStyles>
 			<GroupName>
-				<h1>Avion School</h1>
+				<h1>ChatBox</h1>
 				<BsPencilSquare onClick={handleNewMessage} />
 			</GroupName>
 			<div>
