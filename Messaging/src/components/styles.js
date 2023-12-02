@@ -290,11 +290,11 @@ export const Options = styled.div`
 export const FormLayout = styled(FlexContainer)`
 	justify-content: center;
 	align-items: center;
-	background-color: #f6f6f6;
+	background-color: #add8e6;
 	height: 100vh;
 	color: #000;
 	div {
-		background-color: #ffffff;
+		background-color: #00bfff;
 	}
 `;
 
