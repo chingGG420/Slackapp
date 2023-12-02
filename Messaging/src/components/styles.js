@@ -33,8 +33,7 @@ export const ModalStyles = styled.div`
 	}
 `;
 
-// DASHBOARD
-// TOPBAR
+//DashBoard & TopBar
 export const TopBarLayout = styled.div`
 	height: 7vh;
 	background-color: #00008b;
@@ -55,7 +54,7 @@ export const Avatar = styled.div`
 	border: 1px solid white;
 `;
 
-// SIDEBAR
+//SideBar
 export const SidebarStyles = styled.div`
 	background-color: #00008b;
 	height: 93vh;
@@ -142,7 +141,7 @@ export const Plus = styled.li`
 	}
 `;
 
-// MESSAGES
+//Messages
 export const MessageContainer = styled.div`
 	background-color: #212121;
 	height: 93vh;
@@ -172,7 +171,6 @@ export const MessagesStyles = styled.div`
 	overflow: auto;
 `;
 
-// Add this to your styles.js
 export const MessageLayout = styled.div`
   padding: 2rem;
   position: relative;
@@ -244,8 +242,7 @@ export const MessageBoxLayout = styled.form`
   }
 `;
 
-// USER LIST
-
+//UserList
 export const UserListForm = styled.form`
 	border: 0.4px solid #d1d2d336;
 	height: 100%;
@@ -289,8 +286,7 @@ export const Options = styled.div`
 	}
 `;
 
-// LOGIN
-
+//Login
 export const FormLayout = styled(FlexContainer)`
 	justify-content: center;
 	align-items: center;
@@ -347,7 +343,7 @@ export const Errors = styled.p`
 	color: red;
 `;
 
-// New Channel
+//NewChannel
 export const NewChannelLayout = styled.div`
 	width: 95%;
 	margin: auto;
@@ -397,7 +393,7 @@ export const NewChannelLayout = styled.div`
 	}
 `;
 
-// Channel Information
+//ChannelInfo
 export const ChannelInformation = styled.div`
 	padding: 2rem;
 	ul {
