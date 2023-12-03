@@ -6,18 +6,28 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import { UserContext, UserContextProvider } from './contexts/User';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { toast } from 'react-toastify';
 
 function PrivateRoute({ element }) {
   const { user } = useContext(UserContext);
 
   // Redirect to login if user is not authenticated
-  return user ? element : <Navigate to="/" />;
+  if (!user) {
+    toast.error('Please log in to access the dashboard.');
+    return <Navigate to="/" />;
+  }
+
+  return element;
 }
 
 function App() {
   return (
     <UserContextProvider>
       <div className="App">
+        <ToastContainer />
         <Layout>
           <Routes>
             <Route path="/" element={<Login />} />

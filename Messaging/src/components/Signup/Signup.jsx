@@ -2,41 +2,49 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Errors, FormContainer, FormLayout } from '../styles';
 import usePost from '../hooks/usePost';
+import { toast } from 'react-toastify'; // Import the toast module
+import 'react-toastify/dist/ReactToastify.css'; // Import the default styles
+import logoPath from '../../assets/BRLogo1.png';
 
 export default function Signup() {
 	const [userInfo, setUserInfo] = useState({
-		email: '',
-		password: '',
-		password_confirmation: '',
+	  email: '',
+	  password: '',
+	  password_confirmation: '',
 	});
 	const [errorMessage, setErrorMessage] = useState([]);
 	const { res, errors, handleSubmit } = usePost('http://206.189.91.54/api/v1/auth', userInfo);
-
+  
 	const navigate = useNavigate();
-
+  
 	const handleChange = e => {
-		setErrorMessage([]);
-		const key = e.target.id;
-		const value = e.target.value;
-		setUserInfo({
-			...userInfo,
-			[key]: value,
-		});
+	  setErrorMessage([]);
+	  const key = e.target.id;
+	  const value = e.target.value;
+	  setUserInfo({
+		...userInfo,
+		[key]: value,
+	  });
 	};
-
+  
 	useEffect(() => {
-		if (res?.data?.status === 'success') {
-			navigate('/');
-		}
-		setErrorMessage(errors.full_messages);
+	  if (res?.data?.status === 'success') {
+		toast.success('Sign up successful!');
+		navigate('/');
+	  }
+	  if (errors.full_messages && errors.full_messages.length > 0) {
+		toast.error('Please fill out the form correctly.');
+	  }
+	  setErrorMessage(errors.full_messages);
 	}, [res, errors, navigate]);
 
 	return (
 		<FormLayout>
 			<FormContainer>
-				<h1>Sign Up</h1>
+				<img src={logoPath} alt="Logo" />
+				<h1>BackRooms</h1>
 				<p>
-					Create an account using your <span>email</span>
+					Create an account to enter
 				</p>
 				<form onSubmit={handleSubmit}>
 					<div>
@@ -71,9 +79,6 @@ export default function Signup() {
 							value={userInfo.password_confirmation}
 							onChange={handleChange}
 						/>
-						{errorMessage?.map((message, index) => (
-							<Errors key={index}>{message}</Errors>
-						))}
 					</div>
 					<button type="submit">Sign Up</button>
 				</form>

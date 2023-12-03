@@ -5,7 +5,6 @@ import { UserContext } from '../../contexts/User';
 import { FlexContainer, MessageContainer } from '../styles';
 import Sidebar from '../Sidebar/Sidebar';
 import Messages from '../Messages/Chats';
-import TopBar from '../Topbar/TopBar';
 import Title from '../Messages/Title';
 import Modal from '../modal/Modals';
 import NewChannel from '../modal/NewChannel';
@@ -26,7 +25,6 @@ export default function Dashboard() {
 
 	return (
 		<>
-			<TopBar />
 			<FlexContainer>
 				<Sidebar setIsNewMessage={setIsNewMessage} setIsModalShow={setIsModalShow} />
 				<Routes>

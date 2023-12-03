@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import backgroundImagePath from '../assets/BG.jpeg';
+
 
 export const Layout = styled.div`
 	height: 100%;
@@ -33,21 +35,7 @@ export const ModalStyles = styled.div`
 	}
 `;
 
-//DashBoard & TopBar
-export const TopBarLayout = styled.div`
-	height: 7vh;
-	background-color: #00008b;
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	padding: 1rem;
-	color: #d1d2d3;
-	svg {
-		&:hover {
-			cursor: pointer;
-		}
-	}
-`;
+//DashBoard 
 export const Avatar = styled.div`
 	width: 20px;
 	height: 20px;
@@ -56,39 +44,78 @@ export const Avatar = styled.div`
 
 //SideBar
 export const SidebarStyles = styled.div`
-	background-color: #00008b;
-	height: 93vh;
-	flex: 1;
-	h2 {
-		font-size: 1rem;
-		padding-bottom: 0.5rem;
-	}
-	> div {
-		border: 0.4px solid #d1d2d336;
-	}
-	> div:nth-child(2) {
-		height: 90%;
-		overflow: auto;
-		border-top: none;
-	}
+  background-color: #00008b;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > div {
+    border: 0.4px transparent #d1d2d336;
+	margin-top: 20px; // Adjust the value according to your needs
+    padding-left: 20px;
+  }
+  h1 {
+	padding-top: 10px;
+
+  }
+  > div:nth-child(2) {
+    height: 5%;
+    overflow: auto;
+    border-top: none;
+  }
 `;
 
-export const GroupName = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 10%;
-	padding: 2rem;
-	h1 {
-		font-size: 1.5rem;
-	}
-	svg {
-		color: #212121;
-		background-color: #d1d2d3;
-		padding: 5px 10px;
-		font-size: 40px;
-		border-radius: 100%;
-	}
+export const ComposeContainer = styled.span`
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+
+  svg {
+    color: #212121;
+    background-color: #d1d2d3;
+    padding: 5px 10px;
+    font-size: 40px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const LogoutButton = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 7.5rem;
+  padding-left: 1rem;
+  border: none;
+  margin-bottom: 10px;
+
+  span {
+    color: #d1d2d3;
+    font-size: 18px;
+    margin-right: 5px; /* Adjust the margin to control the space between icon and text */
+  }
+
+  svg {
+    color: #d1d2d3;
+    font-size: 24px;
+  }
+
+  &:hover {
+    span, svg {
+      color: #ffffff; /* Change the text and icon color on hover */
+    }
+  }
+  &:focus {
+	border: none;
+    outline: none; /* Remove the white line issue on focus */
+  }
 `;
 
 export const ChannelDMsLayout = styled.div`
@@ -141,10 +168,12 @@ export const Plus = styled.li`
 	}
 `;
 
+
+
 //Messages
 export const MessageContainer = styled.div`
 	background-color: #212121;
-	height: 93vh;
+	height: 100vh;
 	flex: 4;
 `;
 
@@ -290,53 +319,61 @@ export const Options = styled.div`
 export const FormLayout = styled(FlexContainer)`
 	justify-content: center;
 	align-items: center;
-	background-color: #add8e6;
+	background-image: url(${backgroundImagePath});
+	background-size: cover;
+  	background-position: center;
 	height: 100vh;
 	color: #000;
 	div {
-		background-color: #00bfff;
+		background-color: rgba(255, 255, 255, 0.8); /* Change the RGBA values as needed */
 	}
 `;
 
 export const FormContainer = styled.div`
-	padding: 3rem 8rem;
-	flex-basis: 40%;
-	box-shadow: 0px 1px 10px #e4e4e4;
-	h1 {
-		text-align: center;
-		padding-bottom: 2rem;
-	}
-	p {
-		margin-bottom: 10px;
-	}
-	div {
-		margin-bottom: 5px;
-	}
-	input {
-		width: 100%;
-		margin-bottom: 5px;
-		padding: 1rem;
-		border: 1px solid #d1d2d3;
-		border-radius: 3px;
-	}
-	button {
-		margin-top: 10px;
-		margin-bottom: 20px;
-		width: 100%;
-		padding: 1rem;
-		border: 1px solid rgb(97, 148, 129);
-		background-color: rgb(53, 120, 91);
-		border-radius: 3px;
-		font-weight: bold;
-		color: #fff;
-		font-size: 1rem;
-	}
-	a {
-		display: block;
-		text-align: center;
-		color: rgb(90, 124, 171);
-		text-decoration: none;
-	}
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 3rem 8rem;
+  	flex-basis: 30%;
+  	box-shadow: 0px 1px 10px #e4e4e4;
+  	h1 {
+    	text-align: center;
+    	padding-bottom: 2rem;
+  	}
+  	p {
+    	margin-bottom: 10px;
+  	}
+  	div {
+    	margin-bottom: 10px;
+  	}
+  	input {
+    	width: 100%;
+    	margin-bottom: 3px;
+    	padding: 1rem;
+    	border: none;
+		background-color: transparent;
+		outline: none;
+    	border-radius: 5px;
+  	}
+  	button {
+    	margin-top: 10px;
+    	margin-bottom: 20px;
+    	width: 100%;
+    	padding: 1rem;
+    	border: 1px solid rgb(97, 148, 129);
+    	background-color: rgb(53, 120, 91);
+    	border-radius: 3px;
+    	font-weight: bold;
+    	color: #fff;
+    	font-size: 1rem;
+  	}
+  	a {
+    	display: block;
+    	text-align: center;
+    	color: rgb(90, 124, 171);
+    	text-decoration: none;
+  }
 `;
 
 export const Errors = styled.p`
