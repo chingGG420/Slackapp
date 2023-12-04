@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import backgroundImagePath from '../assets/BG.jpeg';
+import messageBGImagePath from '../assets/BRBG.gif';
+import sideBGImagePath from '../assets/sideBGf.png'
 
 
 export const Layout = styled.div`
@@ -44,7 +46,9 @@ export const Avatar = styled.div`
 
 //SideBar
 export const SidebarStyles = styled.div`
-  background-color: #00008b;
+  background-image: url(${sideBGImagePath});
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   flex: 1;
   display: flex;
@@ -172,7 +176,9 @@ export const Plus = styled.li`
 
 //Messages
 export const MessageContainer = styled.div`
-	background-color: #212121;
+	background-image: url(${messageBGImagePath});
+	background-size: cover;
+  	background-position: center;
 	height: 100vh;
 	flex: 4;
 `;
@@ -203,7 +209,7 @@ export const MessagesStyles = styled.div`
 export const MessageLayout = styled.div`
   padding: 2rem;
   position: relative;
-  border-top: 1px solid #d1d2d336;
+  border-top: 1px solid #000000;
 
   &.currentUserMessage {
     justify-content: flex-start;
@@ -217,7 +223,7 @@ export const MessageLayout = styled.div`
     top: -1rem;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid #d1d2d336;
+    border: 1px solid #000000;
     padding: 10px 15px;
     border-radius: 20px;
     font-weight: bold;
@@ -240,7 +246,7 @@ export const MessageLayout = styled.div`
 `;
 
 export const MessageBoxLayout = styled.form`
-  border: 1px solid #d1d2d336;
+  border: .2rem solid #000000;
   border-radius: 10px;
   height: 15%;
   width: 90%;
