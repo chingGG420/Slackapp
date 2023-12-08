@@ -33,7 +33,7 @@ export default function Signup() {
 		navigate('/');
 	  }
 	  if (errors.full_messages && errors.full_messages.length > 0) {
-		toast.error('Please fill out the form correctly.');
+		toast.error('Pssword is incorrect.');
 	  }
 	  setErrorMessage(errors.full_messages);
 	}, [res, errors, navigate]);
