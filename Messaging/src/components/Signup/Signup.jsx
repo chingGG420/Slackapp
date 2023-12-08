@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Errors, FormContainer, FormLayout } from '../styles';
+import { FormContainer, FormLayout } from '../styles';
 import usePost from '../hooks/usePost';
 import { toast } from 'react-toastify'; // Import the toast module
 import 'react-toastify/dist/ReactToastify.css'; // Import the default styles

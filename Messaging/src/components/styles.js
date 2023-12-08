@@ -88,6 +88,7 @@ export const ComposeContainer = styled.span`
 
   &:hover {
     cursor: pointer;
+	color: #ffffff;
   }
 `;
 
@@ -138,6 +139,7 @@ export const ChannelDMsLayout = styled.div`
 		align-items: center;
 		&:hover {
 			background-color: #d1d2d336;
+			color: #ffffff;
 		}
 	}
 `;
@@ -283,6 +285,7 @@ export const UserListForm = styled.form`
 	height: 100%;
 	max-height: 76px;
 	padding: 1rem;
+	color: #262626;
 `;
 
 export const Dropdown = styled.div`
@@ -297,7 +300,7 @@ export const Dropdown = styled.div`
 		outline: none;
 		border: none;
 		padding: 0 1rem;
-		color: #d1d2d3;
+		color: #262626;
 	}
 `;
 
